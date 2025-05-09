@@ -1,0 +1,115 @@
+/* Card hover animation - lebih halus */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Button hover animation - lebih halus */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Form input focus animation - lebih halus */
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    transform: scale(1.005);
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.15);
+}
+
+/* Success message animation - lebih halus */
+.alert-success {
+    animation: fadeInDown 0.4s ease-out;
+}
+
+/* Error message animation - lebih halus */
+.alert-danger {
+    animation: fadeInDown 0.4s ease-out;
+}
+
+/* Badge animation - lebih halus */
+.badge {
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+/* Profile info animation - lebih halus */
+.profile-info {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Keyframes - lebih halus */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Loading animation - lebih halus */
+.loading {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Form validation animation */
+.is-invalid {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, select, textarea {
+    transition: all 0.3s ease;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} 
